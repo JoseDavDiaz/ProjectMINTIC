@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-tstkdd03syu^!qp!pxnow2%+-pzn$#8*q07z(qfyg4pio@#awx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+"""
 ALLOWED_HOSTS = []
-
+CORS_ALLOW_ALL_ORIGINS = True"""
 
 # Application definition
 
@@ -40,16 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'authApp',
-    'corsheaders',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
-    'BLACKLIST_AFTER_ROTATION': True,
+    'BLACKLIST_AFTER_ROTATION': False,
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
@@ -67,7 +67,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
 REST_FRAMEWORK = {
@@ -160,6 +159,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
- 
+""" 
 import django_heroku
-django_heroku.settings(locals())
+django_heroku.settings(locals())"""
