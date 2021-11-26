@@ -26,9 +26,7 @@ SECRET_KEY = 'django-insecure-tstkdd03syu^!qp!pxnow2%+-pzn$#8*q07z(qfyg4pio@#awx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-"""
-ALLOWED_HOSTS = []
-CORS_ALLOW_ALL_ORIGINS = True"""
+
 
 # Application definition
 
@@ -66,8 +64,9 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',       
 ]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
@@ -108,10 +107,10 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db89iccqfd5460',
-        'USER': 'bvdjwxjfbstkhz',
-        'PASSWORD': '0a97d853ddefa80513ed1bb53a4e6e11a2cc0a5de9f291a148871afe5b915986',
-        'HOST': 'ec2-44-194-201-94.compute-1.amazonaws.com',
+        'NAME': 'd35i8gsg11ifpo',
+        'USER': 'aiprtiexootepu',
+        'PASSWORD': '79b8c82666ae1eeca129b936ed48f5c432083e6c9605f4fed6984fd01c47f6ea',
+        'HOST': 'ec2-23-23-133-10.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -159,6 +158,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-""" 
+
 import django_heroku
-django_heroku.settings(locals())"""
+django_heroku.settings(locals())
